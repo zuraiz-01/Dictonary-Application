@@ -1,0 +1,133 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    /* background: linear-gradient(135deg, #f4f4f4, #e0e0e0); */
+    background-color: #555;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 20px;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 12px;
+    font-size: 18px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007BFF;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-left: 0;
+    background: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+#results {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.definition {
+    background: #f9f9f9;
+    padding: 15px;
+    border-left: 5px solid #007BFF;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.definition:hover {
+    background: #e0f7ff;
+}
+
+.definition h3 {
+    margin: 0 0 10px;
+    color: #007BFF;
+    font-size: 1.2em;
+}
+
+.definition p {
+    margin: 5px 0;
+}
+
+.example {
+    font-style: italic;
+    color: #555;
+}
+
+.loading {
+    font-size: 1.2em;
+    color: #007BFF;
+    margin-top: 20px;
+}
+
+.loading::after {
+    content: '...';
+    animation: ellipsis 1.25s infinite;
+}
+
+@keyframes ellipsis {
+    0% { content: '...'; }
+    33% { content: '.  '; }
+    67% { content: '.. '; }
+    100% { content: '...'; }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    button {
+        padding: 10px;
+    }
+}
